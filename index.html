@@ -1113,21 +1113,22 @@ footer{
 
       <div class="proj-card reveal" style="transition-delay:.05s">
         <div class="proj-thumb">
-          <div class="proj-thumb-text">DSA</div>
+          <div class="proj-thumb-text">TYPER</div>
           <div class="proj-thumb-line"></div>
         </div>
         <div class="proj-body">
-          <div class="proj-name">DSA Solutions Library</div>
+          <div class="proj-name">Code-Typer</div>
           <p class="proj-desc">
-            A curated collection of competitive programming solutions in C++,
-            covering arrays, strings, graphs, DP and more — built during Codeverse and beyond.
+            A typing-focused project built to sharpen speed and accuracy with a
+            clean interface and real practice flow for everyday coding sessions.
           </p>
           <div class="proj-stack">
-            <span class="proj-tag">C++</span><span class="proj-tag">Algorithms</span>
-            <span class="proj-tag">LeetCode</span><span class="proj-tag">Codeforces</span>
+            <span class="proj-tag">JavaScript</span><span class="proj-tag">HTML</span>
+            <span class="proj-tag">CSS</span><span class="proj-tag">Typing Practice</span>
           </div>
           <div class="proj-links">
-            <a href="https://github.com/jeetpal-tech" class="proj-link">Code ↗</a>
+            <a href="https://code-typer-jet.vercel.app/" class="proj-link">Live</a>
+            <a href="https://github.com/jeetpal-tech/Code-Typer" class="proj-link">Code ↗</a>
           </div>
         </div>
       </div>
@@ -1507,8 +1508,9 @@ document.querySelectorAll('.proj-links').forEach((wrap, index) => {
   const existingLinks = Array.from(wrap.querySelectorAll('a'));
   const liveHref = existingLinks.find(link => /live|collaborate/i.test(link.textContent))?.getAttribute('href') || (index === 3 ? '#contact' : '#');
   const githubHref = existingLinks.find(link => /code|github/i.test(link.textContent))?.getAttribute('href') || 'https://github.com/jeetpal-tech';
+  const liveAttrs = /^https?:\/\//i.test(liveHref) ? 'target="_blank" rel="noopener noreferrer"' : '';
   wrap.innerHTML = `
-    <a href="${liveHref}" class="proj-link live-link">${liveIcon}</a>
+    <a href="${liveHref}" class="proj-link live-link" ${liveAttrs}>${liveIcon}</a>
     <a href="${githubHref}" class="proj-link" target="_blank">${githubIcon}</a>
   `;
 });
