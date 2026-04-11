@@ -574,6 +574,25 @@ nav.scrolled{ padding:.9rem 5rem; background:rgba(0,0,0,.85); }
   position:relative;overflow:hidden;
   border-bottom:1px solid var(--border2);
 }
+.proj-thumb-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  opacity:.9;
+  transform:scale(1.01);
+  transition:transform .45s ease, opacity .35s ease;
+}
+.proj-card:hover .proj-thumb-image{
+  transform:scale(1.06);
+  opacity:1;
+}
+.proj-thumb-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(3,7,14,.08), rgba(3,7,14,.42));
+  pointer-events:none;
+}
 .proj-thumb-text{
   font-size:3rem;font-weight:900;letter-spacing:-.06em;
   background:linear-gradient(135deg,rgba(22,163,74,.3),rgba(22,163,74,.05));
@@ -811,7 +830,7 @@ footer{
         </div>
         <div class="float-tag ft2">
           <span>⚡</span>
-          <span>C++ · React · Python</span>
+          <span>C � HTML/CSS � Python</span>
         </div>
       </div>
     </div>
@@ -826,7 +845,7 @@ footer{
 <!-- ═══════ ABOUT ═══════ -->
 <section id="about" class="section">
   <div class="section-inner">
-    <div class="section-head reveal">
+    <div class="section-head reveal" style="position:relative;">
       <div class="section-eye">01 — About Me</div>
       <h2 class="section-title">Who I Am</h2>
     </div>
@@ -835,19 +854,20 @@ footer{
         <div class="card-era"><div class="card-era-line"></div>Past</div>
         <div class="card-era-title">The Beginning</div>
         <p class="card-body">
-          My curiosity for computers started early — breaking things, fixing them,
-          then writing my first lines of C++. Competitive programming became my
-          obsession, training me to think precisely and solve under pressure.
+          My journey into tech began with a simple interest in computers and a
+          growing curiosity about how digital things work behind the scenes.
+          That interest slowly turned into learning to code, trying new tools,
+          and enjoying the process of building and improving things on my own.
         </p>
       </div>
       <div class="about-card reveal" style="transition-delay:.1s">
         <div class="card-era"><div class="card-era-line"></div>Present</div>
         <div class="card-era-title">The Focus</div>
         <p class="card-body">
-          Currently pursuing a degree in Artificial Intelligence and Data Science,
-          diving deep into machine learning, data analytics, and practical model-driven
-          problem solving. I enjoy working with data, extracting insights, and building
-          clean interfaces that make information easier to understand.
+          Currently pursuing a BTech in Artificial Intelligence and Data science,
+          while building a strong foundation in programming, web development, and
+          problem solving. I enjoy learning through small projects, improving my
+          basics, and exploring how technology can be used in practical ways.
         </p>
       </div>
       <div class="about-card reveal" style="transition-delay:.2s">
@@ -873,108 +893,103 @@ footer{
     <div class="skills-grid">
       <div class="skill-group">
         <div class="sg-head">
-          <span class="sg-icon">⚛️</span>
           <div class="sg-title-wrap">
-            <span class="sg-name">Frontend Tech Stack</span>
-            <span class="sg-sub">UI engineering</span>
+            <span class="sg-name">Web Basics</span>
+            <span class="sg-sub">Learning by building</span>
           </div>
         </div>
         <p class="sg-copy">
-          I enjoy building clean, animated interfaces with responsive layouts,
-          polished interactions, and strong attention to visual detail.
+          I enjoy creating simple web pages and learning how design, layout,
+          and interactivity come together to make a website feel complete.
         </p>
         <div class="sg-tags">
           <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span>
-          <span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Vite</span>
-          <span class="tag">Tailwind CSS</span><span class="tag">Framer Motion</span><span class="tag">GSAP</span>
+          <span class="tag">Responsive Design</span><span class="tag">Landing Pages</span><span class="tag">DOM Basics</span>
         </div>
       </div>
       <div class="skill-group" style="transition-delay:.1s">
         <div class="sg-head">
           <span class="sg-icon">🧩</span>
           <div class="sg-title-wrap">
-            <span class="sg-name">Backend Tech Stack</span>
-            <span class="sg-sub">Logic and APIs</span>
+            <span class="sg-name">Programming Basics</span>
+            <span class="sg-sub">Core coding practice</span>
           </div>
         </div>
         <p class="sg-copy">
-          Comfortable working on server-side logic, API integration, and app
-          functionality that supports real-world full-stack projects.
+          I am strengthening my coding foundation through regular practice in logic,
+          basic problem solving, and beginner-friendly programming exercises.
         </p>
         <div class="sg-tags">
-          <span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">Python</span>
-          <span class="tag">REST APIs</span><span class="tag">OpenAI API</span><span class="tag">Authentication</span>
+          <span class="tag">C</span><span class="tag">Python</span><span class="tag">JavaScript</span>
+          <span class="tag">Loops</span><span class="tag">Functions</span><span class="tag">Basic Logic</span>
         </div>
       </div>
       <div class="skill-group" style="transition-delay:.2s">
         <div class="sg-head">
           <span class="sg-icon">🗄️</span>
           <div class="sg-title-wrap">
-            <span class="sg-name">Databases & Data</span>
-            <span class="sg-sub">Persistence layer</span>
+            <span class="sg-name">Computer Science Basics</span>
+            <span class="sg-sub">Early foundation</span>
           </div>
         </div>
         <p class="sg-copy">
-          I work with lightweight databases and structured data flows to power
-          projects that need reliable storage and clean data handling.
+          I am currently learning core computer science concepts that help me
+          write better code and understand the basics more clearly.
         </p>
         <div class="sg-tags">
-          <span class="tag">SQL</span><span class="tag">SQLite</span><span class="tag">MySQL</span>
-          <span class="tag">Database Design</span><span class="tag">CRUD</span><span class="tag">JSON</span>
+          <span class="tag">Arrays</span><span class="tag">OOP Basics</span><span class="tag">DBMS Basics</span>
+          <span class="tag">Git Basics</span><span class="tag">Algorithms Basics</span><span class="tag">Debugging Basics</span>
         </div>
       </div>
       <div class="skill-group" style="transition-delay:.05s">
         <div class="sg-head">
           <span class="sg-icon">🛠️</span>
           <div class="sg-title-wrap">
-            <span class="sg-name">Tools &amp; Workflow</span>
-            <span class="sg-sub">Shipping and collaboration</span>
+            <span class="sg-name">Tools I Use</span>
+            <span class="sg-sub">Everyday workflow</span>
           </div>
         </div>
         <p class="sg-copy">
-          Beyond code, I rely on modern tooling for version control, debugging,
-          local development, and collaborative project work.
+          These are the tools I use regularly for coding, practice, and managing
+          my learning as a first-year engineering student.
         </p>
         <div class="sg-tags">
-          <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span>
-          <span class="tag">Linux</span><span class="tag">CLI</span><span class="tag">Postman</span>
-          <span class="tag">Debugging</span><span class="tag">Deployment Basics</span>
+          <span class="tag">VS Code</span><span class="tag">GitHub</span><span class="tag">Git</span>
+          <span class="tag">Terminal Basics</span><span class="tag">Chrome DevTools</span><span class="tag">PowerPoint</span>
         </div>
       </div>
       <div class="skill-group" style="transition-delay:.15s">
         <div class="sg-head">
           <span class="sg-icon">🧠</span>
           <div class="sg-title-wrap">
-            <span class="sg-name">Core AI &amp; DS Skills</span>
-            <span class="sg-sub">Problem-solving foundation</span>
+            <span class="sg-name">Current Focus</span>
+            <span class="sg-sub">Improving step by step</span>
           </div>
         </div>
         <p class="sg-copy">
-          My strongest base comes from AI, data science, and programming fundamentals
-          with the ability to break problems into efficient, practical solutions.
+          Right now, I am focused on improving my fundamentals and gaining more
+          confidence by building small projects consistently.
         </p>
         <div class="sg-tags">
-          <span class="tag">Data Structures</span><span class="tag">Algorithms</span>
-          <span class="tag">OOP</span><span class="tag">DBMS</span><span class="tag">OS</span>
-          <span class="tag">Computer Networks</span><span class="tag">Dynamic Programming</span>
+          <span class="tag">Mini Projects</span><span class="tag">Practice Problems</span>
+          <span class="tag">Web Development</span><span class="tag">College Coursework</span><span class="tag">Consistency</span>
         </div>
       </div>
       <div class="skill-group" style="transition-delay:.25s">
         <div class="sg-head">
           <span class="sg-icon">🏁</span>
           <div class="sg-title-wrap">
-            <span class="sg-name">Coding Practice &amp; Mindset</span>
-            <span class="sg-sub">Consistency and growth</span>
+            <span class="sg-name">Soft Skills</span>
+            <span class="sg-sub">How I approach work</span>
           </div>
         </div>
         <p class="sg-copy">
-          I keep sharpening my thinking through regular problem solving,
-          contests, and continuous learning across the web stack.
+          I try to stay curious, patient, and consistent while learning new
+          concepts and working on team or personal projects.
         </p>
         <div class="sg-tags">
-          <span class="tag">LeetCode</span><span class="tag">Codeforces</span>
-          <span class="tag">Problem Solving</span><span class="tag">DSA Contests</span>
-          <span class="tag">Code Reviews</span><span class="tag">Continuous Learning</span>
+          <span class="tag">Teamwork</span><span class="tag">Communication</span>
+          <span class="tag">Time Management</span><span class="tag">Curiosity</span><span class="tag">Willingness to Learn</span>
         </div>
       </div>
     </div>
@@ -995,7 +1010,7 @@ footer{
         <div class="tl-year"><span class="tl-year-badge">2023 — Present</span></div>
         <div class="tl-card">
           <span class="tl-status status-current">● Currently Enrolled</span>
-          <div class="tl-degree">B.E. in Artificial Intelligence and Data Science</div>
+          <div class="tl-degree">BTech in Artificial Intelligence and Data science</div>
           <div class="tl-school">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
             ICEM, Pune
@@ -1069,51 +1084,11 @@ footer{
     </div>
     <div class="projects-grid">
 
-      <div class="proj-card reveal">
-        <div class="proj-thumb">
-          <div class="proj-thumb-text">PORT</div>
-          <div class="proj-thumb-line"></div>
-        </div>
-        <div class="proj-body">
-          <div class="proj-name">Portfolio Website</div>
-          <p class="proj-desc">
-            A production-grade personal portfolio built with React, Vite, Tailwind CSS
-            and Framer Motion. Minimalist, high-end aesthetic with smooth animations.
-          </p>
-          <div class="proj-stack">
-            <span class="proj-tag">React</span><span class="proj-tag">Vite</span>
-            <span class="proj-tag">Tailwind</span><span class="proj-tag">Framer Motion</span>
-          </div>
-          <div class="proj-links">
-            <a href="#" class="proj-link">Live ↗</a>
-            <a href="https://github.com/jeetpal-tech" class="proj-link">Code ↗</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="proj-card reveal" style="transition-delay:.1s">
-        <div class="proj-thumb">
-          <div class="proj-thumb-text">AI</div>
-          <div class="proj-thumb-line"></div>
-        </div>
-        <div class="proj-body">
-          <div class="proj-name">CS50 AI Project</div>
-          <p class="proj-desc">
-            An AI-powered application built as part of CS50 curriculum. Integrated
-            OpenAI API for intelligent responses with a clean user interface.
-          </p>
-          <div class="proj-stack">
-            <span class="proj-tag">Python</span><span class="proj-tag">OpenAI API</span><span class="proj-tag">CS50</span>
-          </div>
-          <div class="proj-links">
-            <a href="https://github.com/jeetpal-tech" class="proj-link">Code ↗</a>
-          </div>
-        </div>
-      </div>
 
       <div class="proj-card reveal" style="transition-delay:.05s">
         <div class="proj-thumb">
-          <div class="proj-thumb-text">TYPER</div>
+          <img class="proj-thumb-image" alt="Preview of the Code-Typer typing project" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%2306110c'/%3E%3Cstop offset='100%25' stop-color='%23103922'/%3E%3C/linearGradient%3E%3ClinearGradient id='panel' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%230d1723'/%3E%3Cstop offset='100%25' stop-color='%23060b12'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23bg)'/%3E%3Crect x='54' y='52' width='692' height='396' rx='22' fill='url(%23panel)' stroke='%234ade80' stroke-opacity='.28'/%3E%3Crect x='92' y='98' width='616' height='58' rx='12' fill='%230e1f17'/%3E%3Crect x='92' y='192' width='616' height='106' rx='14' fill='%23091310' stroke='%234ade80' stroke-opacity='.15'/%3E%3Crect x='92' y='332' width='180' height='30' rx='8' fill='%231a7f43' fill-opacity='.7'/%3E%3Crect x='292' y='332' width='132' height='30' rx='8' fill='%23263a2e'/%3E%3Crect x='446' y='332' width='116' height='30' rx='8' fill='%23263a2e'/%3E%3Crect x='584' y='332' width='124' height='30' rx='8' fill='%23263a2e'/%3E%3Cg fill='%234ade80'%3E%3Crect x='118' y='214' width='18' height='18' rx='4'/%3E%3Crect x='144' y='214' width='18' height='18' rx='4'/%3E%3Crect x='170' y='214' width='18' height='18' rx='4'/%3E%3C/g%3E%3Cg fill='%23d1fae5' fill-opacity='.9'%3E%3Crect x='118' y='112' width='180' height='10' rx='5'/%3E%3Crect x='118' y='130' width='98' height='8' rx='4' fill-opacity='.65'/%3E%3Crect x='118' y='250' width='534' height='12' rx='6'/%3E%3Crect x='118' y='272' width='464' height='12' rx='6' fill-opacity='.7'/%3E%3C/g%3E%3Ctext x='520' y='138' fill='%234ade80' font-family='Arial, sans-serif' font-size='44' font-weight='700'%3ETYPE%3C/text%3E%3C/svg%3E"/>
+          <div class="proj-thumb-overlay"></div>
           <div class="proj-thumb-line"></div>
         </div>
         <div class="proj-body">
@@ -1135,10 +1110,12 @@ footer{
 
       <div class="proj-card reveal" style="transition-delay:.15s">
         <div class="proj-thumb">
-          <div class="proj-thumb-text">WEB</div>
+          <img class="proj-thumb-image" alt="Preview graphic for an upcoming web project" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='bg2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23190e05'/%3E%3Cstop offset='100%25' stop-color='%2339260d'/%3E%3C/linearGradient%3E%3ClinearGradient id='panel2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23151412'/%3E%3Cstop offset='100%25' stop-color='%230a0908'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23bg2)'/%3E%3Ccircle cx='640' cy='102' r='86' fill='%23fb923c' fill-opacity='.18'/%3E%3Crect x='60' y='52' width='680' height='396' rx='22' fill='url(%23panel2)' stroke='%23fb923c' stroke-opacity='.3'/%3E%3Crect x='98' y='90' width='604' height='48' rx='12' fill='%2321160c'/%3E%3Crect x='98' y='168' width='290' height='210' rx='16' fill='%23120f0c' stroke='%23fb923c' stroke-opacity='.16'/%3E%3Crect x='412' y='168' width='290' height='98' rx='16' fill='%23120f0c' stroke='%23fb923c' stroke-opacity='.16'/%3E%3Crect x='412' y='280' width='290' height='98' rx='16' fill='%23120f0c' stroke='%23fb923c' stroke-opacity='.16'/%3E%3Cg fill='%23fed7aa'%3E%3Crect x='126' y='112' width='140' height='9' rx='4.5'/%3E%3Crect x='126' y='187' width='138' height='14' rx='7'/%3E%3Crect x='126' y='214' width='212' height='10' rx='5' fill-opacity='.75'/%3E%3Crect x='126' y='238' width='184' height='10' rx='5' fill-opacity='.55'/%3E%3Crect x='438' y='195' width='196' height='13' rx='6.5'/%3E%3Crect x='438' y='306' width='176' height='13' rx='6.5'/%3E%3C/g%3E%3Crect x='126' y='320' width='118' height='28' rx='10' fill='%23f97316' fill-opacity='.8'/%3E%3Ctext x='505' y='124' fill='%23fdba74' font-family='Arial, sans-serif' font-size='34' font-weight='700'%3ECOMING SOON%3C/text%3E%3C/svg%3E"/>
+          <div class="proj-thumb-overlay"></div>
           <div class="proj-thumb-line"></div>
         </div>
         <div class="proj-body">
+          <div style="position:absolute;top:1rem;right:1rem;font-family:var(--m);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#fdba74;border:1px solid rgba(251,146,60,.35);padding:.35rem .7rem;border-radius:999px;background:rgba(251,146,60,.12);">working on it</div>
           <div class="proj-name">Your Next Project</div>
           <p class="proj-desc">
             Currently cooking something new. Always building, always shipping.
